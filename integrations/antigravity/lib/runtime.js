@@ -270,6 +270,7 @@ export function createAgyRuntime(options = {}) {
       launchers,
       assistant: true,
       socketPath: options.socketPath,
+      instance: options.instance,
       log,
       ...(update ? { package: { name: update.name, hash: update.hash }, onUpdate: (offer) => void takeUpdate(offer) } : {}),
       retryMs: options.retryMs,
